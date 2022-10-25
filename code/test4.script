@@ -1,0 +1,4 @@
+Proc Entry
+begin1
+    OUT "错误抛出测试1"
+end

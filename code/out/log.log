@@ -1,0 +1,5 @@
+[2021-12-27 16:01:35] .\test1.script 执行命令行: python .\main.py -f .\test1.script -s .\speak\.\test1.speak -nc  -o .\out.\.\test1.out
+[2021-12-27 16:01:35] .\test2.script 执行命令行: python .\main.py -f .\test2.script -s .\speak\.\test2.speak -nc  -o .\out.\.\test2.out
+[2021-12-27 16:01:36] .\test3.script 执行命令行: python .\main.py -f .\test3.script -nc  -o .\out.\.\test3.out
+[2021-12-27 16:01:36] .\test4.script 执行命令行: python .\main.py -f .\test4.script -nc  -o .\out.\.\test4.out
+[2021-12-27 16:01:36] .\test5.script 执行命令行: python .\main.py -f .\test5.script -nc  -o .\out.\.\test5.out

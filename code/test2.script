@@ -1,0 +1,51 @@
+@
+    注释测试
+    聊天推销机器人
+    auther: LLeaves
+    date  : 2021/12/19
+@
+
+$name = ""
+$input = ""
+
+Proc Entry
+begin
+    OUT "很高兴认识你,你叫什么名字?"
+    IN $name
+    OUT "你好" + $name + ",想要了解以下哪个产品呢?你可以直接输入名称"
+    Run OutGPU
+    IN $input
+    Switch $input
+    begin
+        Branch "2080" Run GTX2080
+        Branch "Tesla" Run Teslav100
+        Default Run Unknow
+    end
+    EXIT
+end
+
+Proc OutGPU
+begin
+    OUT "1.GTX 2080"
+    OUT "2.Tesla v100"
+end
+
+Proc GTX2080
+begin
+    OUT "显存容量：8192MB"
+    OUT "核心频率：1515/1800MHz"
+    OUT "售价: 6498RMB"
+end
+
+Proc Teslav100
+begin
+    OUT "显存容量：16GB"
+    OUT "核心频率：5012MHz"
+    OUT "售价: 43999RMB"
+end
+
+Proc Unknow
+begin
+    OUT "您好,暂未收录该信息,退出系统"
+    EXIT
+end

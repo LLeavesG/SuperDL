@@ -1,0 +1,22 @@
+@
+    auther: LLeaves
+    date  : 2021/12/19
+    循环逻辑测试
+@
+
+$value = 0
+
+Proc Entry
+begin
+    $value = 2
+    Loop INC 12
+    OUT "循环测试结束"
+    EXIT
+end
+
+# 自增
+Proc INC
+begin
+    OUT "value : " + $value 
+    $value = $value + 2
+end

@@ -1,0 +1,61 @@
+# using coding utf-8
+
+@
+    多行注释测试
+    author:Test
+    date: 2021/12/29
+    联通客服机器人
+@
+
+$name = "John" 
+$input = ""
+$month = 1
+$used = 20.20
+$left = 40.80
+$complain_content = ""
+
+
+Proc Entry 
+begin 
+    OUT $name + ",请问有什么可以帮您?" 
+    IN $input
+    # 根据输入内容进行模糊匹配 单行注释测试
+    Switch $input 
+    begin
+        Branch "查询" Loop QueryInfo 3
+        Branch "投诉" Run Complain
+        Branch "退出" Run Exit
+        Default Run Unknow
+    end
+    Run Entry
+end
+
+Proc QueryInfo
+begin
+    OUT "尊敬的" + $name + ",您" + $month + "月份账单如下" 
+	OUT "话费已用" + $used + ",剩余" + $left
+    $month = $month + 1 
+    $used = 1 + $used
+    $left = $left - 1
+end
+
+Proc Complain
+begin 
+    OUT "您的意见是我们改进工作的动力，请问您还有什么补充"
+    IN $complain_content 
+    OUT "您的建议我们已经收到,感谢您对我们工作的支持"
+end 
+
+Proc Unknow
+begin
+    OUT "您好,没有听清,请您再说一遍" 
+    OUT "您可以选择查询,投诉或者退出"
+end
+
+
+
+Proc Exit
+begin
+    OUT "退出成功"
+    EXIT
+end

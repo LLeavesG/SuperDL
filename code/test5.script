@@ -1,0 +1,4 @@
+Proc Entry1
+begin
+    OUT "123"
+end
