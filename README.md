@@ -10,6 +10,7 @@ show  : 实现一个客服脚本解释器
 ---
 <div STYLE="page-break-after: always;"></div>
 
+
 ---
 <div STYLE="page-break-after: always;"></div>
 
@@ -413,7 +414,7 @@ def send_var(self):
         """
 
         # 测试桩: 向远程服务器发送GET请求请求内容为变量值
-        url = 'http://49.232.162.82/test.php?var=' + json.dumps(self.var)
+        url = 'http://xxx.xxx.xxx.xxx/test.php?var=' + json.dumps(self.var)
         respose = requests.get(url=url)
 
         # 响应输出
@@ -427,7 +428,7 @@ def send_var(self):
         """        
 
         # 测试桩: 向远程服务器发送信息
-        url = 'http://49.232.162.82/test.php?msg=' + msg
+        url = 'http://xxx.xxx.xxx.xxx/test.php?msg=' + msg
         respose = requests.get(url=url)
 
 
@@ -439,7 +440,7 @@ def send_var(self):
         """        
         # 测试桩: 从远程服务器接收信息
 
-        url = 'http://49.232.162.82/' + request
+        url = 'http://xxx.xxx.xxx.xxx/' + request
         respose = requests.get(url=url)
 
         return respose
@@ -537,7 +538,7 @@ if encoding[0] == "#":
 从第一行开始读取脚本文件，若遇到空行和单行注释则跳过
 由于解释器是过程Proc驱动的(指令只能出现在Proc中)，在解析过程中若遇到Proc声明即进入parse_proc进行单独处理,遇到变量则处理加入变量表，以及遇到多行注释进行单独的函数handle_note进行处理
 在parse_proc中对指令进行词法分析和语法分析(内含Switch结构的词法语法分析),模块化过程Proc，使得分析结束后的proc单独成块作为proc实例保存到proc_block字典中以便后续执行
-**函数具体说明见API文档 http://49.232.162.82/index.html**
+**函数具体说明见API文档 http://xxx.xxx.xxx.xxx/index.html**
 
 ```python=
 # parse_file 函数(部分)
@@ -801,7 +802,7 @@ def send_var(self):
         """        
 
         # 测试桩: 向远程服务器发送信息
-        url = 'http://49.232.162.82/test.php?msg=' + msg
+        url = 'http://xxx.xxx.xxx.xxx/test.php?msg=' + msg
         respose = requests.get(url=url)
 
 ```
@@ -818,7 +819,7 @@ def send_var(self):
         """        
         # 测试桩: 从远程服务器接收信息
 
-        url = 'http://49.232.162.82/' + request
+        url = 'http://xxx.xxx.xxx.xxx/' + request
         respose = requests.get(url=url)
 
         return respose
